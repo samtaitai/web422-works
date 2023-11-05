@@ -1,0 +1,40 @@
+<div
+  class="card text-center"
+  [ngStyle]="{ background: 'rgba(175, 235, 169, 0.8)' }"
+>
+  <img
+    [src]="imageUrl"
+    class="card-img-top rounded-image"
+    alt="..."
+    [ngStyle]="{ width: '280px' }"
+  />
+  <div class="card-body">
+    <h5 class="card-title">{{ name }}</h5>
+    <p class="card-text">{{ job }}</p>
+    <p class="card-text">{{ rate }}</p>
+  </div>
+  <div class="row">
+    <div class="d-flex flex-row justify-content-around">
+      <img
+        [src]="'../assets/images/linkedIn.png'"
+        alt="LinkedIn"
+        [ngStyle]="{ height: '70%' }"
+      />
+      <img
+        [src]="'../assets/images/twitter.png'"
+        alt="Twitter"
+        [ngStyle]="{ height: '70%' }"
+      />
+      <img
+        [src]="'../assets/images/github.png'"
+        alt="GitHub"
+        [ngStyle]="{ height: '70%' }"
+      />
+      <img
+        [src]="'../assets/images/email.png'"
+        alt="Email"
+        [ngStyle]="{ height: '70%' }"
+      />
+    </div>
+  </div>
+</div>

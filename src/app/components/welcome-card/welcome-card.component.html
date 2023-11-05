@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <div class="row m-md-4 p-md-4" id="welcome-wrapper">
+    <div class="col-md-4 m-md-4">
+      <h4 class="card-title mt-3 mb-3">Welcome to Hire4U</h4>
+      <p class="card-text">
+        As a premium employer, you have full access to all the premium features
+        of this portal. Please feel free navigate through various components of
+        this portal to get maximum benefit. Do not hesitate to contact us if you
+        have any queries.
+      </p>
+    </div>
+    <div class="col">
+      <div class="row m-md-auto">
+        <div *ngFor="let item of welcome" class="col">
+          <app-cards
+            [title]="item.title"
+            [description]="item.description"
+            [buttonText]="item.buttonText"
+            [backgroundColor]="item.backgroundColor"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

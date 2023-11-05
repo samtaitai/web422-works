@@ -1,0 +1,51 @@
+<app-nav-bar />
+<h1 [ngStyle]="{ marginBottom: '20px', marginLeft: '10px', marginTop: '10px' }">
+  Hi, Jonathan
+</h1>
+<app-welcome-card />
+<h2 [ngStyle]="{ marginBottom: '40px', marginLeft: '10px', marginTop: '40px' }">
+  Trending Talents
+</h2>
+<div class="container-fluid">
+  <div class="d-flex justify-content-around mx-md-4 my-md-2">
+    <app-talent-card
+      [imageUrl]="images[0]"
+      [name]="names[0]"
+      [job]="jobs[0]"
+      [rate]="rates[0]"
+      (click)="populateBio(0)"
+    />
+    <app-talent-card
+      [imageUrl]="images[1]"
+      [name]="names[1]"
+      [job]="jobs[1]"
+      [rate]="rates[1]"
+      (click)="populateBio(1)"
+    />
+    <app-talent-card
+      [imageUrl]="images[2]"
+      [name]="names[2]"
+      [job]="jobs[2]"
+      [rate]="rates[2]"
+      (click)="populateBio(2)"
+    />
+    <app-talent-card
+      [imageUrl]="images[3]"
+      [name]="names[3]"
+      [job]="jobs[3]"
+      [rate]="rates[3]"
+      (click)="populateBio(3)"
+    />
+    <app-talent-card
+      [imageUrl]="images[4]"
+      [name]="names[4]"
+      [job]="jobs[4]"
+      [rate]="rates[4]"
+      (click)="populateBio(4)"
+    />
+  </div>
+  <ng-container *ngIf="this.show == true">
+    <app-bio-area [name]="name" [job]="job" [bio]="bio" />
+  </ng-container>
+</div>
+<app-footer />
